@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>NÁHLED · nová kompozice tří řad · 3. 9. 2026</title>
+<link rel="stylesheet" href="css/glassfloor.css">
+<style>
+  /* ---------- NÁVRH: ŘADA JAKO GALERIJNÍ DVOJSTRANA ---------- */
+  .rada-blok{padding:clamp(56px,6.4vw,104px) 0;position:relative}
+  .rada-blok + .rada-blok{border-top:1px solid var(--hair)}
+  .rada-blok .g{align-items:end}
+
+  /* velké číslo řady jako tichý orientační bod */
+  .rada-cislo{position:absolute;top:clamp(30px,3.4vw,52px);font-weight:100;
+    font-size:clamp(90px,9vw,168px);line-height:.8;color:rgba(255,255,255,.055);
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light",Arial,sans-serif;
+    user-select:none;pointer-events:none}
+  .rada-blok:nth-child(odd) .rada-cislo{right:var(--gut)}
+  .rada-blok:nth-child(even) .rada-cislo{left:var(--gut)}
+
+  .rada-foto{grid-column:span 8}
+  .rada-foto img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+  .rada-foto figcaption{font-size:13px;letter-spacing:.06em;color:var(--grey);padding-top:12px}
+  .rada-text{grid-column:span 4;padding-bottom:clamp(6px,1vw,14px)}
+  .rada-blok:nth-child(even) .rada-foto{order:2}
+  .rada-blok:nth-child(even) .rada-text{order:1}
+
+  .rada-text h2{font-weight:190;font-size:clamp(32px,3.2vw,54px);letter-spacing:-.018em;
+    line-height:1.04;margin:clamp(10px,1.2vw,16px) 0 clamp(16px,1.8vw,24px);
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light",Arial,sans-serif}
+  .rada-text h2 em{font-style:normal;color:var(--gf)}
+  .rada-text p{font-weight:260;font-size:17.5px;line-height:1.62;color:#dde5ea}
+
+  /* tři fakta místo tří seznamů */
+  .rada-fakta2{list-style:none;margin-top:clamp(24px,2.8vw,36px);border-top:1px solid var(--gf)}
+  .rada-fakta2 li{display:flex;justify-content:space-between;gap:18px;padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.10);font-weight:260;font-size:16px;color:#e3eaee}
+  .rada-fakta2 li span{font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--grey);flex:0 0 auto;padding-top:4px}
+  .rada-text .lnk{margin-top:clamp(22px,2.4vw,30px)}
+
+  /* společné provedení jednou pro všechny řady, ne třikrát */
+  .spolecne{border:1px solid var(--gf);padding:clamp(26px,3vw,46px);
+    display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);
+    margin-top:clamp(40px,4.6vw,66px)}
+  .spolecne .h{grid-column:span 4}
+  .spolecne .o{grid-column:span 8}
+  .spolecne h3{font-weight:260;font-size:clamp(21px,1.8vw,27px);letter-spacing:-.01em;
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light",Arial,sans-serif}
+  .spolecne p{font-weight:260;font-size:16.5px;line-height:1.62;color:#dde5ea}
+  .spolecne p + p{margin-top:12px}
+
+  @media(max-width:1000px){
+    .rada-foto,.rada-text{grid-column:span 12}
+    .rada-blok:nth-child(even) .rada-foto{order:0}
+    .rada-blok:nth-child(even) .rada-text{order:0}
+    .rada-text{padding-top:clamp(20px,3vw,28px)}
+    .spolecne .h,.spolecne .o{grid-column:span 12}
+  }
+
+
+  /* typizovane rozmery jako lehke stitky, ne tabulka */
+  .rada-rozmery{margin-top:clamp(22px,2.4vw,32px)}
+  .chipy{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .chipy li{border:1px solid rgba(255,255,255,.26);padding:7px 12px;font-size:14.5px;
+    font-weight:260;color:#e3eaee;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .mimo{margin-top:14px;font-size:14.5px;line-height:1.55;color:var(--grey);font-weight:260}
+
+  /* jen pro náhled */
+  .nahled-info{background:#101a21;border-bottom:1px solid var(--hair);padding:18px var(--gut)}
+  .nahled-info p{font-size:14px;color:#9fb2bf;max-width:none}
+  .nahled-info b{color:#f5f8fa;font-weight:350}
+  .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="nahled-info">
+  <p><b>NÁHLED, není součástí webu.</b> Nová kompozice tří řad. Velká fotka, krátký text, tři fakta místo tří seznamů. Opakující se provedení je jednou pro všechny řady, tabulky rozměrů se přesouvají do samostatné sekce níž na stránce.</p>
+</div>
+
+<section class="xl">
+  <div class="wrap">
+    <div class="sec-head g rv">
+      <div class="c7">
+        <span class="k kicker">Tři základní řady</span>
+        <h2 class="h2">Jeden systém, tři tvary.</h2>
+      </div>
+      <p class="lead c5">Řady se liší tím, kolik rámu je po osazení vidět, a tvarem otvoru. Skladba zasklení, nosnost i způsob osazení zůstávají stejné.</p>
+    </div>
+  </div>
+
+  <div class="rada-blok">
+    <span class="rada-cislo" aria-hidden="true">01</span>
+    <div class="wrap g">
+      <figure class="rada-foto rv">
+        <img src="img/terasa-drevo-ctverec.jpg" alt="Čtvercový pochozí světlík s přiznaným nerezovým rámem v dřevěné terase" loading="lazy">
+        <figcaption>Čtvercový formát v dřevěné terase</figcaption>
+      </figure>
+      <div class="rada-text rv">
+        <span class="meta-l">Řada 01</span>
+        <h2>GLASSFLOOR <em>chrome</em></h2>
+        <p>Nerezový rám široký 4 cm zůstává po osazení přiznaný. Působí masivně, dobře drží tvar i u větších formátů a snese pravidelný provoz na terase i ve veřejné budově.</p>
+        <ul class="rada-fakta2">
+          <li><span>Tvar</span>čtverec a obdélník</li>
+          <li><span>Rám</span>nerez, šířka 4 cm</li>
+        </ul>
+        <div class="rada-rozmery">
+          <span class="meta-l">Typizované rozměry otvoru (cm)</span>
+          <ul class="chipy">
+          <li>80 × 80</li>
+          <li>100 × 100</li>
+          <li>120 × 80</li>
+          <li>120 × 120</li>
+          <li>200 × 50</li>
+          <li>250 × 80</li>
+          </ul>
+          <p class="mimo">Jiný rozměr vyrobíme na zakázku, od 40 cm bez horní hranice.</p>
+        </div>
+        <a class="lnk" href="#rozmery">Světlá plocha a vnější rozměry rámu</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rada-blok">
+    <span class="rada-cislo" aria-hidden="true">02</span>
+    <div class="wrap g">
+      <figure class="rada-foto rv">
+        <img src="img/interier-pure-jidelna.jpg" alt="Interiér se světlíkem GLASSFLOOR pure v podlaze" loading="lazy" style="object-position:center 78%">
+        <figcaption>Pure v podlaze obytného prostoru</figcaption>
+      </figure>
+      <div class="rada-text rv">
+        <span class="meta-l">Řada 02</span>
+        <h2>GLASSFLOOR <em>pure</em></h2>
+        <p>Velmi úzký obvodový rám. Ze světlíku zůstane po dokončení hlavně skleněná plocha, přechod do dlažby nebo dřeva je nenápadný. Volba pro místa, kde má architektura zůstat klidná.</p>
+        <ul class="rada-fakta2">
+          <li><span>Tvar</span>čtverec a obdélník</li>
+          <li><span>Rám</span>nerez, šířka 0,5 cm</li>
+        </ul>
+        <div class="rada-rozmery">
+          <span class="meta-l">Typizované rozměry otvoru (cm)</span>
+          <ul class="chipy">
+          <li>80 × 80</li>
+          <li>100 × 100</li>
+          <li>120 × 80</li>
+          <li>120 × 120</li>
+          <li>200 × 50</li>
+          <li>250 × 80</li>
+          </ul>
+          <p class="mimo">Jiný rozměr vyrobíme na zakázku, od 40 cm bez horní hranice.</p>
+        </div>
+        <a class="lnk" href="#rozmery">Světlá plocha a vnější rozměry rámu</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rada-blok">
+    <span class="rada-cislo" aria-hidden="true">03</span>
+    <div class="wrap g">
+      <figure class="rada-foto rv">
+        <img src="img/terasa-kruhovy-svetlik.jpg" alt="Kruhový pochozí světlík v travertinové terase" loading="lazy">
+        <figcaption>Kruhový formát v travertinové terase</figcaption>
+      </figure>
+      <div class="rada-text rv">
+        <span class="meta-l">Řada 03</span>
+        <h2>GLASSFLOOR <em>circle</em></h2>
+        <p>Kruh tvoří protiváhu pravoúhlé stavbě, nebo naopak doplňuje organickou architekturu. Používá se i tam, kde má světlo dopadnout do jednoho konkrétního místa pod terénem.</p>
+        <ul class="rada-fakta2">
+          <li><span>Tvar</span>kruh</li>
+          <li><span>Rám</span>nerez, šířka 0,3 cm</li>
+        </ul>
+        <div class="rada-rozmery">
+          <span class="meta-l">Typizované rozměry otvoru (cm)</span>
+          <ul class="chipy">
+          <li>⌀ 60</li>
+          <li>⌀ 80</li>
+          <li>⌀ 100</li>
+          <li>⌀ 120</li>
+          </ul>
+          <p class="mimo">Jiný rozměr vyrobíme na zakázku, od 40 cm bez horní hranice.</p>
+        </div>
+        <a class="lnk" href="#rozmery">Světlá plocha a vnější rozměry rámu</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="spolecne rv">
+      <div class="h">
+        <span class="meta-l">Společné všem třem řadám</span>
+        <h3 style="margin-top:10px">Liší se rám, ne konstrukce.</h3>
+      </div>
+      <div class="o">
+        <p><b style="font-weight:350">Standardní provedení:</b> pochozí typ, izolační dvojsklo z extra čirého skla, nerezový rám vně i uvnitř, osazení v jedné rovině s okolním povrchem.</p>
+        <p><b style="font-weight:350">Na míru:</b> od 40 cm bez horní hranice, ve všech třech tvarech. Každá řada existuje i v požárním provedení FIRESTOP a ve variantách AIRFLOW a RWA.</p>
+        <p><b style="font-weight:350">Výbava:</b> izolační trojsklo, systémový izolační rám, protiskluz, PRIVA-LITE, vyhřívání a senzory, LED. <a class="lnk" style="border:none;text-decoration:underline" href="#vybava">Co se k čemu hodí</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

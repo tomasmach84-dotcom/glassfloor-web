@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>NÁHLED · vymezení cenové kategorie · sekce „Kdy GLASSFLOOR nedává smysl“ · 3. 9. 2026</title>
+<link rel="stylesheet" href="css/glassfloor.css">
+<style>
+  /* ---------- NÁVRH: KDY TO NEDÁVÁ SMYSL ---------- */
+  .nedava{position:relative}
+  /* text sedel na svetlem miste ocelove textury a ztracel se.
+     Sekce proto dostava vlastni tmavou desku s mekkymi okraji. */
+  .nedava::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:linear-gradient(rgba(11,19,25,.30), rgba(11,19,25,.52) 22%, rgba(11,19,25,.52) 84%, rgba(11,19,25,.22));
+    border-top:1px solid rgba(255,255,255,.10);border-bottom:1px solid rgba(255,255,255,.10)}
+  .nedava > .wrap{position:relative;z-index:1}
+  .ne-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);
+    border-top:2px solid var(--ink);padding-top:clamp(26px,3vw,42px);row-gap:clamp(34px,4vw,56px)}
+  .ne{grid-column:span 6;display:grid;grid-template-columns:clamp(54px,4.6vw,86px) 1fr;gap:clamp(14px,1.6vw,26px)}
+  .ne .zn{font-size:clamp(30px,2.8vw,46px);line-height:.9;font-weight:170;color:rgba(255,255,255,.3);
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif;
+    font-variant-numeric:tabular-nums;padding-top:4px}
+  .ne h3{font-weight:260;font-size:clamp(22px,2vw,30px);letter-spacing:-.012em;line-height:1.2;
+    margin-bottom:clamp(12px,1.4vw,18px);
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif}
+  .ne p{font-weight:260;font-size:17px;line-height:1.62;color:#dde5ea;max-width:52ch}
+  .ne p + p{margin-top:10px}
+  @media(max-width:1000px){ .ne{grid-column:span 12} }
+
+  /* protiváha: kdy naopak dává */
+  .dava{margin-top:clamp(44px,5vw,72px);border:1px solid var(--gf);
+    padding:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);align-items:center}
+  .dava .t{grid-column:span 7}
+  .dava .a{grid-column:span 5;justify-self:end}
+  .dava h3{font-weight:260;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.012em;margin-bottom:14px;
+    font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif}
+  .dava p{font-weight:260;font-size:17.5px;line-height:1.6;color:#dde5ea;max-width:60ch}
+  @media(max-width:1000px){ .dava .t,.dava .a{grid-column:span 12} .dava .a{justify-self:start;margin-top:24px} }
+
+  /* jen pro náhled */
+  .nahled-info{background:#101a21;border-bottom:1px solid var(--hair);padding:18px var(--gut)}
+  .nahled-info p{font-size:14px;color:#9fb2bf;max-width:none}
+  .nahled-info b{color:#f5f8fa;font-weight:350}
+  .rv{opacity:1;transform:none}
+  .prep{display:flex;gap:10px;margin-top:14px}
+  .prep button{background:none;border:1px solid rgba(255,255,255,.28);color:#c3d0d9;
+    font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 16px;cursor:pointer;transition:all .25s}
+  .prep button:hover{border-color:#fff;color:#fff}
+  .prep button.on{background:#abffe0;border-color:#abffe0;color:#0d1a17}
+</style>
+</head>
+<body>
+
+<div class="nahled-info">
+  <p><b>NÁHLED, není součástí webu.</b> Sekce vymezuje cenovou kategorii bez ceníku. Umístění na hlavní stránce: za „S kým u projektu stojíme“, před scénou „Standardní rozměr, nebo přesně ten váš“.</p>
+  <div class="prep">
+    <button type="button" class="on" data-ton="ostry">Ostřejší znění</button>
+    <button type="button" data-ton="mirny">Mírnější znění</button>
+  </div>
+</div>
+
+<section class="xl nedava" id="nedava" style="padding-top:clamp(60px,6.8vw,104px)">
+  <div class="wrap">
+
+    <div class="sec-head g rv">
+      <div class="c7">
+        <span class="k kicker" id="t-kick">Než nám napíšete</span>
+        <h2 class="h2" id="t-nadpis">Kdy GLASSFLOOR nedává smysl.</h2>
+      </div>
+      <p class="lead c5" id="t-lead">Řekneme to radši hned na začátku než po třech schůzkách. Jsou stavby, kde je náš systém špatná volba, a umíme to poznat z jednoho řezu.</p>
+    </div>
+
+    <div class="ne-grid">
+
+      <div class="ne rv">
+        <span class="zn" aria-hidden="true">01</span>
+        <div>
+          <h3 id="t-h1">Když rozhoduje nejnižší cena</h3>
+          <p id="t-p1a">GLASSFLOOR je zakázkové švýcarské prosklení v nerezovém rámu, ne stavební položka. Cenově patří ke kvalitnímu velkoformátovému prosklení, ne ke střešnímu světlíku z velkoobchodu, a začíná v řádu statisíců.</p>
+          <p id="t-p1b">Pokud hledáte nejlevnější způsob, jak dostat světlo o patro níž, existují vhodnější řešení. Rádi vám je pojmenujeme, i když je nedodáváme.</p>
+        </div>
+      </div>
+
+      <div class="ne rv">
+        <span class="zn" aria-hidden="true">02</span>
+        <div>
+          <h3 id="t-h2">Když to má být hned</h3>
+          <p id="t-p2a">Každý kus jde do výroby až po odsouhlaseném návrhu a vyrábí se ve Švýcarsku. Mezi zadáním a osazením proto počítejte s několika týdny, u složitých detailů s delší dobou.</p>
+          <p id="t-p2b">Ten čas není zdržení. Je v něm posouzení konstrukce, výrobní dokumentace, slícování a kontrola, díky kterým se prvek na stavbě jen usadí a nedolaďuje.</p>
+        </div>
+      </div>
+
+      <div class="ne rv">
+        <span class="zn" aria-hidden="true">03</span>
+        <div>
+          <h3 id="t-h3">Když na to není v konstrukci místo</h3>
+          <p id="t-p3">Rám má výšku 12 cm, potřebuje spolehlivé uložení a spád aspoň 1,5 %, aby po skle odtékala voda. Kde to skladba stropu nedovolí, kvalitní výsledek neslíbíme a řekneme to rovnou.</p>
+        </div>
+      </div>
+
+      <div class="ne rv">
+        <span class="zn" aria-hidden="true">04</span>
+        <div>
+          <h3 id="t-h4">Když jde jen o prosvětlení sklepa</h3>
+          <p id="t-p4">Na technický prostor, kde nikdo netráví čas a nezáleží na tom, jak vypadá podlaha nad ním, je GLASSFLOOR zbytečně drahé řešení. Dává smysl tam, kde je prosklení současně součástí architektury.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dava rv">
+      <div class="t">
+        <h3 id="t-hd">Kdy naopak dává smysl</h3>
+        <p id="t-pd">Když má stavba vypadat dobře i za deset let, když se pochozí plocha nemá tvářit jako světlík a když víte, že rozdíl mezi dobrým a odbytým detailem uvidíte každý den. Hotový otvor přitom nevadí, kus vyrobíme přesně na jeho rozměr.</p>
+      </div>
+      <div class="a">
+        <button class="cta" type="button">Představit projekt</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+const ZNENI = {
+ "ostry": {
+  "t-kick": "Než nám napíšete",
+  "t-nadpis": "Kdy GLASSFLOOR nedává smysl.",
+  "t-lead": "Řekneme to radši hned na začátku než po třech schůzkách. Jsou stavby, kde je náš systém špatná volba, a umíme to poznat z jednoho řezu.",
+  "t-h1": "Když rozhoduje nejnižší cena",
+  "t-p1a": "GLASSFLOOR je zakázkové švýcarské prosklení v nerezovém rámu, ne stavební položka. Cenově patří ke kvalitnímu velkoformátovému prosklení, ne ke střešnímu světlíku z velkoobchodu, a začíná v řádu statisíců.",
+  "t-p1b": "Pokud hledáte nejlevnější způsob, jak dostat světlo o patro níž, existují vhodnější řešení. Rádi vám je pojmenujeme, i když je nedodáváme.",
+  "t-h2": "Když to má být hned",
+  "t-p2a": "Každý kus jde do výroby až po odsouhlaseném návrhu a vyrábí se ve Švýcarsku. Mezi zadáním a osazením proto počítejte s několika týdny, u složitých detailů s delší dobou.",
+  "t-p2b": "Ten čas není zdržení. Je v něm posouzení konstrukce, výrobní dokumentace, slícování a kontrola, díky kterým se prvek na stavbě jen usadí a nedolaďuje.",
+  "t-h3": "Když na to není v konstrukci místo",
+  "t-p3": "Rám má výšku 12 cm, potřebuje spolehlivé uložení a spád aspoň 1,5 %, aby po skle odtékala voda. Kde to skladba stropu nedovolí, kvalitní výsledek neslíbíme a řekneme to rovnou.",
+  "t-h4": "Když jde jen o prosvětlení sklepa",
+  "t-p4": "Na technický prostor, kde nikdo netráví čas a nezáleží na tom, jak vypadá podlaha nad ním, je GLASSFLOOR zbytečně drahé řešení. Dává smysl tam, kde je prosklení současně součástí architektury.",
+  "t-hd": "Kdy naopak dává smysl",
+  "t-pd": "Když má stavba vypadat dobře i za deset let, když se pochozí plocha nemá tvářit jako světlík a když víte, že rozdíl mezi dobrým a odbytým detailem uvidíte každý den. Hotový otvor přitom nevadí, kus vyrobíme přesně na jeho rozměr."
+ },
+ "mirny": {
+  "t-kick": "Otevřeně",
+  "t-nadpis": "Kdy vám doporučíme něco jiného.",
+  "t-lead": "Řekneme to radši hned. Jsou stavby, kde by byl náš systém zbytečný, a poznáme to už z jednoho řezu.",
+  "t-h1": "Když je hlavním kritériem cena",
+  "t-p1a": "GLASSFLOOR je zakázkové švýcarské prosklení v nerezovém rámu. Cenově patří ke kvalitnímu velkoformátovému prosklení a začíná v řádu statisíců.",
+  "t-p1b": "Pokud hledáte úspornější způsob, jak dostat světlo o patro níž, poradíme vám, kde ho hledat. I když ho sami nedodáváme.",
+  "t-h2": "Když nezbývá čas",
+  "t-p2a": "Každý kus jde do výroby až po odsouhlaseném návrhu a vyrábí se ve Švýcarsku. Mezi zadáním a osazením proto počítejte s několika týdny.",
+  "t-p2b": "Ten čas není zdržení. Je v něm posouzení konstrukce, výrobní dokumentace, slícování a kontrola. Prvek se pak na stavbě už jen usadí.",
+  "t-h3": "Když na to není v konstrukci místo",
+  "t-p3": "Rám má výšku 12 cm, potřebuje spolehlivé uložení a spád aspoň 1,5 %, aby po skle odtékala voda. Když to skladba stropu nedovolí, řekneme to rovnou a hledáme jinou cestu.",
+  "t-h4": "Když jde o technický prostor",
+  "t-p4": "Tam, kde nikdo netráví čas a nezáleží na vzhledu podlahy nad ním, je GLASSFLOOR zbytečný. Vynikne tam, kde je prosklení součástí architektury.",
+  "t-hd": "Kdy naopak sedne přesně",
+  "t-pd": "Když má stavba vypadat dobře i za deset let, když se pochozí plocha nemá tvářit jako světlík a když víte, že rozdíl mezi dobrým a odbytým detailem uvidíte každý den. Hotový otvor přitom nevadí, kus vyrobíme přesně na jeho rozměr."
+ }
+};
+document.querySelectorAll('.prep button').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.prep button').forEach(function(x){ x.classList.remove('on') });
+    b.classList.add('on');
+    const t = ZNENI[b.dataset.ton];
+    for (const id in t) { const el = document.getElementById(id); if (el) el.textContent = t[id]; }
+  });
+});
+</script>
+</body>
+</html>

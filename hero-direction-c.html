@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Hero směr C — Light Transformation · GLASSFLOOR</title>
+<style>
+  :root{
+    --paper:#fbfbfa;
+    --ink:#1b1b1a;
+    --grey:#75756f;
+    --hair:#e0e0db;
+    --dark:#242628;
+    --gut:clamp(20px,4vw,64px);
+    --sans:"Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,251,250,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 var(--gut)}
+  .logo{font-weight:350;letter-spacing:.42em;font-size:14px}
+  .logo b{font-weight:650}
+  .nav ul{display:flex;gap:clamp(18px,2.6vw,36px);list-style:none}
+  .nav ul a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:400;transition:color .2s}
+  .nav ul a:hover{color:var(--ink)}
+  .nav .cta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:2px}
+  @media(max-width:820px){.nav ul{display:none}}
+
+  /* ---------- HERO: PROMĚNA SVĚTLEM ---------- */
+  .hero{
+    display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);
+    min-height:calc(100svh - 60px);
+  }
+  /* levá strana: od tmy ke světlu */
+  .hero-copy{
+    position:relative;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(36px,6vh,80px) var(--gut);
+    background:linear-gradient(105deg, var(--dark) 0%, #3f4244 46%, #8f8f8b 82%, #c6c6c1 100%);
+    color:#fff;overflow:hidden;
+  }
+  .hero-copy .eyebrow{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;
+    color:rgba(255,255,255,.85);margin-bottom:30px;
+  }
+  .hero-copy h1{
+    font-weight:250;font-size:clamp(36px,4vw,64px);line-height:1.14;letter-spacing:.002em;
+    max-width:18ch;margin-bottom:24px;color:#fff;text-shadow:0 1px 18px rgba(0,0,0,.16);
+  }
+  .hero-copy h1 b{font-weight:600}
+  .hero-copy p.sub{max-width:44ch;font-weight:300;color:#e9e8e4;margin-bottom:38px;text-shadow:0 1px 10px rgba(0,0,0,.14)}
+  .cta-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .btn-solid{background:#fff;color:var(--ink);padding:14px 28px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+  .btn-solid:hover{background:var(--ink);color:#fff}
+  .lnk{font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.8);padding-bottom:3px;color:#fff}
+  .lnk:hover{opacity:.65}
+  .hero-copy .claim{
+    margin-top:clamp(30px,6vh,60px);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#dcdbd6;font-weight:400;
+  }
+
+  /* pravá strana: světlo ve stropě, došlap na skle */
+  .hero-photo{position:relative;overflow:hidden;background:#191a1b}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 38%;position:absolute;inset:0}
+  @media (prefers-reduced-motion: no-preference){
+    .hero-photo img{animation:glow 26s ease-in-out infinite alternate}
+    @keyframes glow{from{filter:brightness(.96)}to{filter:brightness(1.07)}}
+  }
+  .hero-photo .note{
+    position:absolute;left:0;bottom:0;right:0;z-index:2;
+    padding:16px var(--gut);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    background:linear-gradient(0deg, rgba(10,10,11,.62), transparent);
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#e6e5e1;
+  }
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero-copy{min-height:62svh;justify-content:flex-end;
+      background:linear-gradient(160deg, var(--dark) 0%, #3f4244 46%, #8f8f8b 88%, #c6c6c1 105%)}
+    .hero-photo{aspect-ratio:4/3}
+  }
+
+  /* ---------- PŘECHOD: SVĚTELNÝ PRÁH ---------- */
+  .threshold{
+    position:relative;height:86px;background:var(--paper);border-bottom:1px solid var(--hair);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .threshold::before{
+    content:"";position:absolute;left:50%;top:-30px;transform:translateX(-50%);
+    width:clamp(160px,30vw,420px);height:60px;border-radius:50%;
+    background:radial-gradient(ellipse at center, rgba(247,236,196,.9), transparent 70%);
+    pointer-events:none;
+  }
+  .threshold span{position:relative;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--grey)}
+
+  /* ---------- PRVNÍ SEKCE: PŘÍPADOVÁ STUDIE ---------- */
+  .case{padding:clamp(56px,8vw,110px) var(--gut)}
+  .case-inner{max-width:1320px;margin:0 auto}
+  .case .one-line{
+    font-weight:250;font-size:clamp(26px,3.2vw,48px);line-height:1.2;letter-spacing:.002em;
+    max-width:24ch;margin-bottom:clamp(38px,5vw,64px);
+  }
+  .case .one-line b{font-weight:600}
+  .case-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(22px,3vw,48px);align-items:stretch}
+  .case-grid figure{position:relative}
+  .case-grid img{width:100%;height:100%;object-fit:cover}
+  .case-grid figure:first-child img{aspect-ratio:4/3}
+  .case-grid .side{display:flex;flex-direction:column;gap:clamp(22px,3vw,48px)}
+  .case-grid .side img{aspect-ratio:16/10}
+  .case-grid figcaption{padding:10px 2px 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .case-text{display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
+  .case-text .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+  .case-text p{font-weight:300;color:#42423e;max-width:44ch}
+  .case-text a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px;align-self:flex-start}
+  @media(max-width:880px){.case-grid{grid-template-columns:1fr}}
+
+  footer{padding:22px var(--gut);border-top:1px solid var(--hair);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer span{font-size:11px;color:var(--grey);letter-spacing:.06em}
+
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+  .rv.on{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+  @media(max-width:600px){
+    body{overflow-x:hidden}
+    .hero-copy .eyebrow{letter-spacing:.14em;font-size:10px}
+    .logo{letter-spacing:.26em}
+    .cta-row{flex-direction:column;align-items:flex-start;gap:18px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#"><b>GLASS</b>FLOOR®</a>
+    <ul>
+      <li><a href="#">Realizace</a></li>
+      <li><a href="#pripad">Princip</a></li>
+      <li><a href="#">Pro architekty</a></li>
+    </ul>
+    <a class="cta" href="#">Konzultace</a>
+  </div>
+</header>
+
+<!-- HERO: OD TMY KE SVĚTLU -->
+<section class="hero">
+  <div class="hero-copy">
+    <div>
+      <p class="eyebrow">GLASSFLOOR® · St. Gallen · Switzerland</p>
+      <h1>Světlo prochází místy, <b>která ostatní považují za podlahu.</b></h1>
+      <p class="sub">Zakázkově vyráběné pochozí světlíky pro terasy, střechy a podlahy, ve kterých rozhoduje každý milimetr.</p>
+      <div class="cta-row">
+        <a class="btn-solid" href="#pripad">Objevit GLASSFLOOR</a>
+        <a class="lnk" href="#">Konzultovat projekt</a>
+      </div>
+    </div>
+    <p class="claim">Bez GLASSFLOOR je to sklep. S GLASSFLOOR je to místnost.</p>
+  </div>
+
+  <figure class="hero-photo">
+    <img src="img/firestop-interier.jpg" alt="Pohled z interiéru: denní světlo prochází pochozím světlíkem ve stropě, na skle je vidět došlap boty">
+    <div class="note">
+      <span>Pohled z interiéru — nad stropem je pochozí plocha</span>
+      <span>na skle: došlap chodce</span>
+    </div>
+  </figure>
+</section>
+
+<!-- PŘECHOD: SVĚTELNÝ PRÁH -->
+<div class="threshold">
+  <span>Denní světlo pokračuje níž</span>
+</div>
+
+<!-- PRVNÍ SEKCE: PŘÍPADOVÁ STUDIE -->
+<section class="case" id="pripad">
+  <div class="case-inner">
+    <h2 class="one-line rv">Denní světlo <b>bez ztráty pochozí plochy.</b></h2>
+    <div class="case-grid">
+      <figure class="rv">
+        <img src="img/pohled-shora-interier.jpg" alt="Pohled shora skrz pochozí sklo do obývacího pokoje pod zahradou">
+        <figcaption>Zumikon, Švýcarsko — pohled skrz pochozí sklo do podlaží pod zahradou</figcaption>
+      </figure>
+      <div class="side">
+        <figure class="rv">
+          <img src="img/zahrada-svetliky-chodnik.jpg" alt="Tentýž světlík v kamenném chodníku zahrady">
+          <figcaption>Tentýž prvek shora: běžně pochozí část chodníku</figcaption>
+        </figure>
+        <div class="case-text rv">
+          <span class="k">Případová studie — Zumikon</span>
+          <p>Nosná skleněná plocha přivádí denní světlo do podlaží pod terasou bez ztráty využitelného prostoru nad ní. Každý GLASSFLOOR vzniká podle konkrétní skladby stavby a finální roviny okolního povrchu.</p>
+          <a href="#">Celá realizace</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>GLASSFLOOR® · Heliobus AG — hero směr C „Light Transformation“ (interní preview, pouze header + hero + první sekce)</span>
+  <span>Prototyp · 2026</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+  }), { threshold: .15 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
