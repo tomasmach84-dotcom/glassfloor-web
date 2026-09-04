@@ -27,7 +27,7 @@
      (25.8.2026), jen ho zakrývala. Vrstva body::before s obrázkem textury
      (dřív ocel, pak samet) zrušena, zůstal jen gradient na body. Obě dřívější
      varianty (ocel i samet) jsou pro srovnání v _STARE. */
-  body{font-family:var(--sans);background:linear-gradient(118deg, #1a242c 0%, #2c3a44 34%, #40525f 62%, #6b7f8c 88%, #93a3ae 108%);background-attachment:fixed;color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);background:linear-gradient(118deg, #122130 0%, #243748 34%, #384F63 62%, #637C90 88%, #8BA0B2 108%);background-attachment:fixed;color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
@@ -116,7 +116,7 @@
   /* ---------- F1: HERO — rozdělená scéna dle dopolední homepage-c ---------- */
   .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);min-height:100svh}  /* 1/3 text : 2/3 foto (16.7.2026 na přání) */
   .hero-copy{position:relative;display:flex;flex-direction:column;justify-content:center;color:#fff;overflow:hidden;
-    background:linear-gradient(105deg, #212b34 0%, #354551 46%, #6c818e 82%, #9facb4 100%);
+    background:linear-gradient(105deg, #192838 0%, #2D4255 46%, #647E92 82%, #97A9B8 100%);
     padding-top:110px;padding-bottom:36px;padding-right:clamp(28px,4vw,72px);
     padding-left:max(var(--gut), calc((100vw - var(--max))/2 + var(--gut)))}
   .hero .eyebrow .e-rule{display:block;width:34px;height:1px;background:currentColor;opacity:.55;flex:0 0 auto;margin-top:.62em}
@@ -140,7 +140,7 @@
   @media(max-width:900px){
     .hero{grid-template-columns:1fr;min-height:0}
     .hero-copy{min-height:62svh;justify-content:flex-end;padding-left:var(--gut);padding-right:var(--gut);
-      background:linear-gradient(160deg, #212b34 0%, #354551 46%, #6c818e 88%, #9facb4 105%);}
+      background:linear-gradient(160deg, #192838 0%, #2D4255 46%, #647E92 88%, #97A9B8 105%);}
     .hero .claim{margin-top:clamp(26px,5vh,44px)}
     /* 25.8.2026 faze 1: na mobilu musi byt cast fotky videt uz v prvnim okne.
        Text zabira 58 % vysky okna, fotka zacina hned pod nim a pokracuje pod ohyb. */
