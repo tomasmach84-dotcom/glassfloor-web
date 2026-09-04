@@ -637,7 +637,8 @@
   .rada-rozmery{margin-top:clamp(22px,2.4vw,32px)}
   .chipy{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .chipy li{border:1px solid rgba(255,255,255,.26);padding:7px 12px;font-size:14.5px;
-    font-weight:260;color:#e3eaee;font-variant-numeric:tabular-nums;white-space:nowrap}
+    font-weight:260;color:#e3eaee;font-variant-numeric:tabular-nums;white-space:nowrap;
+    min-width:76px;text-align:center;box-sizing:border-box}
   .mimo{margin-top:14px;font-size:14.5px;line-height:1.55;color:var(--grey);font-weight:260}
 
   /* provedeni spolecne vsem radam, jednou misto trikrat */
