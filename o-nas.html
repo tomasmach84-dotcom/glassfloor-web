@@ -10,25 +10,13 @@
 <style>
   /* 4.9.2026: vlaječky před slovy "švýcarský" a "český" v nadpisu - nahrazují velký samostatný kříž */
   .flag-ch,.flag-cz{display:inline-block;vertical-align:0.06em;width:.85em;height:.6em;position:relative;overflow:hidden;margin-right:.14em}
-  .flag-ch{background:var(--red);width:.6em}
+  .flag-ch{background:var(--red);width:.9em;height:.9em;vertical-align:-0.09em;margin-right:.2em}
   .flag-ch::before,.flag-ch::after{content:"";position:absolute;background:#fff}
   .flag-ch::before{left:50%;top:19%;width:23%;height:62%;transform:translateX(-50%)}
   .flag-ch::after{top:50%;left:19%;height:23%;width:62%;transform:translateY(-50%)}
   .flag-cz{background:linear-gradient(180deg,#fff 50%,#d7141a 50%)}
   .flag-cz::before{content:"";position:absolute;left:0;top:0;width:0;height:0;
     border-top:.3em solid transparent;border-bottom:.3em solid transparent;border-left:.425em solid #11457e}
-
-  /* 4.9.2026: "trasa" CH -> CZ do prázdného místa vpravo od nadpisu - propojuje obě vlaječky s příběhem stránky */
-  .route{display:flex;flex-direction:column;align-items:flex-start;gap:0}
-  .route-pt{display:flex;align-items:center;gap:12px}
-  .route-pt .flag-ch,.route-pt .flag-cz{width:26px;height:26px;margin:0;flex:0 0 auto}
-  .route-pt .flag-cz{width:38px;height:26px}
-  .route-pt span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:rgba(255,255,255,.75)}
-  .route-pt b{display:block;font-weight:350;font-size:15px;letter-spacing:.02em;text-transform:none;color:#fff}
-  .route-line{width:1px;height:96px;margin-left:19px;position:relative;
-    background:repeating-linear-gradient(to bottom, rgba(255,255,255,.4) 0 4px, transparent 4px 11px)}
-  .route-line i{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);
-    width:9px;height:9px;border:1.5px solid var(--gf);background:rgba(171,255,224,.18)}
 </style>
 </head>
 <body>
@@ -68,20 +56,11 @@
 </header>
 
 <section class="page-head">
-  <div class="wrap g rv" style="align-items:center">
-    <div class="c7">
-      <a class="k crumb" href="barva-CMYK.html">&larr; Zpět na úvod</a>
-      <span class="k kicker">O nás</span>
-      <h1 class="h1"><span style="white-space:nowrap"><i class="flag-ch" aria-hidden="true"></i>Švýcarský</span> vývoj, <span style="white-space:nowrap"><i class="flag-cz" aria-hidden="true"></i>český</span> servis.</h1>
-      <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
-    </div>
-    <div class="c5" style="display:flex;justify-content:center">
-      <div class="route">
-        <div class="route-pt"><i class="flag-ch" aria-hidden="true"></i><span>St. Gallen<br><b>vývoj a výroba</b></span></div>
-        <div class="route-line" aria-hidden="true"><i></i></div>
-        <div class="route-pt"><i class="flag-cz" aria-hidden="true"></i><span>Česká republika<br><b>zastoupení a servis</b></span></div>
-      </div>
-    </div>
+  <div class="wrap rv">
+    <a class="k crumb" href="barva-CMYK.html">&larr; Zpět na úvod</a>
+    <span class="k kicker">O nás</span>
+    <h1 class="h1"><span style="white-space:nowrap"><i class="flag-ch" aria-hidden="true"></i>Švýcarský</span> vývoj, <span style="white-space:nowrap"><i class="flag-cz" aria-hidden="true"></i>český</span> servis.</h1>
+    <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
   </div>
 </section>
 
