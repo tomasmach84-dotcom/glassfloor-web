@@ -69,10 +69,16 @@
 
   /* 4.9.2026: hlavička - logo bez podtitulu, přitažené až k levému okraji okna
      (stejný princip výpočtu okraje jako u .hero-copy padding-left, jen se znaménkem mínus).
-     4.9.2026 večer: lišta na přání zeštíhlena, logo kvůli tomu menší. */
-  header .nav{min-height:clamp(60px,5.5vw,92px);padding-top:10px;padding-bottom:10px}
-  header .nav .lockup{margin-left:calc(-1 * max(var(--gut), calc((100vw - var(--max))/2 + var(--gut))))}
+     4.9.2026 večer: lišta na přání zeštíhlena, logo kvůli tomu menší.
+     4.9.2026 pozdě večer: lišta na 3 sloupce (logo / menu / CTA), menu vycentrované doprostřed,
+     tlačítko Představit projekt zrcadlově přitažené k pravému okraji stejně jako logo vlevo. */
+  header .nav{min-height:clamp(60px,5.5vw,92px);padding-top:10px;padding-bottom:10px;
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+  header .nav .lockup{grid-column:1;justify-self:start;margin-left:calc(-1 * max(var(--gut), calc((100vw - var(--max))/2 + var(--gut))))}
   header .nav .lockup .gflogo{height:clamp(34px,3.6vw,54px)}
+  header .nav > ul{grid-column:2;justify-self:center}
+  header .nav > .cta,header .nav > .menu-btn{grid-column:3;justify-self:end}
+  header .nav > .cta{margin-right:calc(-1 * max(var(--gut), calc((100vw - var(--max))/2 + var(--gut))))}
   .hero-copy{padding-top:clamp(96px,8vw,140px) !important}
   @media(max-width:900px){.hero-copy{padding-top:clamp(88px,14vw,112px) !important}}
 </style>
