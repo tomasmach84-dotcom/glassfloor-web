@@ -7,6 +7,14 @@
 <title>Kontakt · GLASSFLOOR® pro Českou republiku</title>
 <meta name="description" content="Kontakt na WT - WINDOWS TOMORROW s.r.o., oficiální zastoupení GLASSFLOOR pro Českou republiku. Telefon, e-mail, sídlo a formulář pro posouzení projektu.">
 <link rel="stylesheet" href="css/glassfloor.css">
+<style>
+  /* 4.9.2026: šablona pro 4 kontaktní osoby, dokud nejsou skutečné fotky - jen rámeček s ikonou */
+  .placeholder-figure{display:flex;align-items:center;justify-content:center;
+    border:1px dashed rgba(255,255,255,.3);color:rgba(255,255,255,.45);background:none !important}
+  .placeholder-figure::after{display:none}
+  .team-grid .c3.tm{grid-column:span 3}
+  @media(max-width:900px){.team-grid .c3.tm{grid-column:span 12}}
+</style>
 </head>
 <body>
 
@@ -69,6 +77,71 @@
       <h3 style="margin:10px 0 clamp(14px,1.8vw,20px)">Popište nám projekt.</h3>
       <p>Stačí základní výkres, řez nebo jen popis záměru. Klidně i fotka nebo náčrt tužkou. Nejprve posoudíme, zda je GLASSFLOOR pro danou konstrukci vhodným řešením.</p>
       <button class="cta" style="margin-top:clamp(22px,3vw,32px)" onclick="document.getElementById('dlg').showModal()">Představit projekt</button>
+    </div>
+  </div>
+</section>
+
+<!-- ŠABLONA: S KÝM BUDETE JEDNAT — 4 kontaktní osoby, zatím bez fotek/jmen (4.9.2026).
+     Až budou k dispozici skutečné fotky a jména, nahradit placeholder-figure za <img> a text v [závorkách]. -->
+<section class="xl">
+  <div class="wrap">
+    <div class="sec-head g rv">
+      <div class="c7">
+        <span class="k kicker">S kým budete jednat</span>
+        <h2 class="h2">Konkrétní lidé, ne centrála.</h2>
+      </div>
+      <p class="lead c5">Podle typu projektu vás nasměrujeme na správného člověka. Fotky a jména doplníme.</p>
+    </div>
+    <div class="team-grid g rv">
+
+      <div class="c3 tm">
+        <figure class="placeholder-figure" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </figure>
+        <span class="meta-l tm-role">[Role / oddělení]</span>
+        <h3>[Jméno Příjmení]</h3>
+        <ul class="tm-cv">
+          <li><span>Telefon</span>[doplnit]</li>
+          <li><span>E-mail</span>[doplnit]</li>
+        </ul>
+      </div>
+
+      <div class="c3 tm">
+        <figure class="placeholder-figure" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </figure>
+        <span class="meta-l tm-role">[Role / oddělení]</span>
+        <h3>[Jméno Příjmení]</h3>
+        <ul class="tm-cv">
+          <li><span>Telefon</span>[doplnit]</li>
+          <li><span>E-mail</span>[doplnit]</li>
+        </ul>
+      </div>
+
+      <div class="c3 tm">
+        <figure class="placeholder-figure" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </figure>
+        <span class="meta-l tm-role">[Role / oddělení]</span>
+        <h3>[Jméno Příjmení]</h3>
+        <ul class="tm-cv">
+          <li><span>Telefon</span>[doplnit]</li>
+          <li><span>E-mail</span>[doplnit]</li>
+        </ul>
+      </div>
+
+      <div class="c3 tm">
+        <figure class="placeholder-figure" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </figure>
+        <span class="meta-l tm-role">[Role / oddělení]</span>
+        <h3>[Jméno Příjmení]</h3>
+        <ul class="tm-cv">
+          <li><span>Telefon</span>[doplnit]</li>
+          <li><span>E-mail</span>[doplnit]</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
