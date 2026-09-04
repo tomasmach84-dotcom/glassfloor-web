@@ -27,8 +27,9 @@
      (25.8.2026), jen ho zakrývala. Vrstva body::before s obrázkem textury
      (dřív ocel, pak samet) zrušena, zůstal jen gradient na body. Obě dřívější
      varianty (ocel i samet) jsou pro srovnání v _STARE. */
-  /* 4.9.2026: barvy gradientu nahrazeny odstíny změřenými z GF.jpg (podpis v e-mailu) - stejný směr (tmavá vlevo, světlejší vpravo), jen barvy #293F57 -> #4E6C86 -> #587891 */
-  body{font-family:var(--sans);background:linear-gradient(112deg, #293F57 0%, #4E6C86 38%, #587891 100%);background-attachment:fixed;color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  /* 4.9.2026: barvy gradientu nahrazeny odstíny změřenými z GF.jpg (podpis v e-mailu): na fotce zabírá tmavý přechod
+     jen prvních cca 35 % šířky, zbylé 2/3 jsou už naplocho barva #587891 - proto přechod končí brzy, ne rovnoměrně přes celou šířku */
+  body{font-family:var(--sans);background:linear-gradient(112deg, #293F57 0%, #587891 35%);background-attachment:fixed;color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
@@ -117,7 +118,7 @@
   /* ---------- F1: HERO — rozdělená scéna dle dopolední homepage-c ---------- */
   .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);min-height:100svh}  /* 1/3 text : 2/3 foto (16.7.2026 na přání) */
   .hero-copy{position:relative;display:flex;flex-direction:column;justify-content:center;color:#fff;overflow:hidden;
-    background:linear-gradient(105deg, #293F57 0%, #4E6C86 42%, #587891 100%);
+    background:linear-gradient(105deg, #293F57 0%, #587891 35%);
     padding-top:110px;padding-bottom:36px;padding-right:clamp(28px,4vw,72px);
     padding-left:max(var(--gut), calc((100vw - var(--max))/2 + var(--gut)))}
   .hero .eyebrow .e-rule{display:block;width:34px;height:1px;background:currentColor;opacity:.55;flex:0 0 auto;margin-top:.62em}
@@ -141,7 +142,7 @@
   @media(max-width:900px){
     .hero{grid-template-columns:1fr;min-height:0}
     .hero-copy{min-height:62svh;justify-content:flex-end;padding-left:var(--gut);padding-right:var(--gut);
-      background:linear-gradient(160deg, #293F57 0%, #4E6C86 55%, #587891 105%);}
+      background:linear-gradient(160deg, #293F57 0%, #587891 40%);}
     .hero .claim{margin-top:clamp(26px,5vh,44px)}
     /* 25.8.2026 faze 1: na mobilu musi byt cast fotky videt uz v prvnim okne.
        Text zabira 58 % vysky okna, fotka zacina hned pod nim a pokracuje pod ohyb. */
