@@ -7,6 +7,17 @@
 <title>O nás · GLASSFLOOR® v České republice</title>
 <meta name="description" content="GLASSFLOOR vyvíjí a vyrábí švýcarská Heliobus AG ve St. Gallen. V České republice systém zastupuje WT - WINDOWS TOMORROW s.r.o. Lidé, kteří za tím stojí.">
 <link rel="stylesheet" href="css/glassfloor.css">
+<style>
+  /* 4.9.2026: vlaječky před slovy "švýcarský" a "český" v nadpisu - nahrazují velký samostatný kříž */
+  .flag-ch,.flag-cz{display:inline-block;vertical-align:0.06em;width:.85em;height:.6em;position:relative;overflow:hidden;margin-right:.14em}
+  .flag-ch{background:var(--red)}
+  .flag-ch::before,.flag-ch::after{content:"";position:absolute;background:#fff}
+  .flag-ch::before{left:50%;top:19%;width:23%;height:62%;transform:translateX(-50%)}
+  .flag-ch::after{top:50%;left:19%;height:23%;width:62%;transform:translateY(-50%)}
+  .flag-cz{background:linear-gradient(180deg,#fff 50%,#d7141a 50%)}
+  .flag-cz::before{content:"";position:absolute;left:0;top:0;width:0;height:0;
+    border-top:.3em solid transparent;border-bottom:.3em solid transparent;border-left:.425em solid #11457e}
+</style>
 </head>
 <body>
 
@@ -45,16 +56,11 @@
 </header>
 
 <section class="page-head">
-  <div class="wrap g rv" style="align-items:center">
-    <div class="c8">
-      <a class="k crumb" href="barva-CMYK.html">&larr; Zpět na úvod</a>
-      <span class="k kicker">O nás</span>
-      <h1 class="h1">Švýcarský vývoj, český servis.</h1>
-      <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
-    </div>
-    <div class="c4" style="display:flex;justify-content:center">
-      <i class="swiss-cross" aria-hidden="true" style="width:clamp(90px,11vw,150px);height:clamp(90px,11vw,150px)"></i>
-    </div>
+  <div class="wrap rv">
+    <a class="k crumb" href="barva-CMYK.html">&larr; Zpět na úvod</a>
+    <span class="k kicker">O nás</span>
+    <h1 class="h1"><span style="white-space:nowrap"><i class="flag-ch" aria-hidden="true"></i>Švýcarský</span> vývoj, <span style="white-space:nowrap"><i class="flag-cz" aria-hidden="true"></i>český</span> servis.</h1>
+    <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
   </div>
 </section>
 
