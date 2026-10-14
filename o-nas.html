@@ -17,12 +17,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:url" content="https://www.glassfloor.cz/o-nas.html">
-<meta property="og:image" content="https://www.glassfloor.cz/img/hero-zumikon-169.jpg">
-<meta property="og:image:alt" content="Pochozí světlíky GLASSFLOOR zapuštěné v rovině terasy u vily v Zumikonu, Švýcarsko">
+<meta property="og:image" content="https://www.glassfloor.cz/img/o-nas-hero.jpg">
+<meta property="og:image:alt" content="Dodávka Heliobus na Mánesově mostě v Praze, v pozadí Pražský hrad">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="O nás · GLASSFLOOR® a WT - WINDOWS TOMORROW">
 <meta name="twitter:description" content="GLASSFLOOR vyvíjí a vyrábí švýcarská Heliobus AG ve St. Gallen. V České republice systém zastupuje WT - WINDOWS TOMORROW s.r.o. Lidé, kteří za tím stojí.">
-<meta name="twitter:image" content="https://www.glassfloor.cz/img/hero-zumikon-169.jpg">
+<meta name="twitter:image" content="https://www.glassfloor.cz/img/o-nas-hero.jpg">
 
 <script type="application/ld+json">
 {
@@ -38,7 +38,7 @@
   },
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://www.glassfloor.cz/img/hero-zumikon-169.jpg"
+    "url": "https://www.glassfloor.cz/img/o-nas-hero.jpg"
   }
 }
 </script>
@@ -116,6 +116,43 @@
   .flag-cz::before{content:"";position:absolute;left:0;top:0;width:0;height:0;
     border-top:.3em solid transparent;border-bottom:.3em solid transparent;border-left:.425em solid #11457e}
 
+  /* 14.10.2026: úvod stránky O nás = fotka s hradem volná, nadpis na obloze nad dodávkou, lead a čísla v pásu pod fotkou */
+  .onas-hero{position:relative;height:min(94svh,56vw);min-height:520px;overflow:hidden;background:#161e25;color:#fff;isolation:isolate}
+  .onas-hero picture,.onas-hero img.bg{position:absolute;inset:0;width:100%;height:100%;z-index:-2;display:block}
+  .onas-hero img.bg{object-fit:cover;object-position:0% 20%;filter:brightness(1.12) saturate(1.06)}
+  @media(prefers-reduced-motion:no-preference){.onas-hero img.bg{transform-origin:30% 70%;animation:onasZoom 30s ease-in-out infinite alternate}}
+  @keyframes onasZoom{from{transform:scale(1)}to{transform:scale(1.05)}}
+  .onas-hero::before{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(18,30,42,.3) 0%,rgba(18,30,42,.1) 22%,rgba(18,30,42,0) 40%),
+               linear-gradient(90deg,rgba(18,30,42,.2) 0%,rgba(18,30,42,0) 50%),
+               linear-gradient(0deg,rgba(26,36,44,0) 0%,rgba(26,36,44,0) 7%)}
+  .onas-hero .copy{width:100%;box-sizing:border-box;padding-top:112px}
+  .onas-hero .crumbs{margin-bottom:clamp(10px,1.4vw,18px)}
+  .onas-hero .h1{max-width:none;text-shadow:0 2px 36px rgba(0,0,0,.7),0 1px 5px rgba(0,0,0,.4)}
+  .o-band{background:transparent;color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+  .o-intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,70px);align-items:end;padding:clamp(8px,1.2vw,18px) 0 clamp(26px,3vw,44px)}
+  .o-intro .lead{max-width:56ch;margin:0}
+  .o-flags{display:flex;flex-direction:column;gap:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e3eaee;padding-bottom:6px}
+  .o-flags span{display:inline-flex;align-items:center;gap:12px}
+  .o-flags .flag-ch,.o-flags .flag-cz{font-size:15px;margin:0;vertical-align:0}
+  .fakta ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2)}
+  .fakta li{padding:clamp(14px,1.3vw,20px) clamp(14px,2vw,28px);border-left:1px solid rgba(255,255,255,.14)}
+  .fakta li:first-child{border-left:0;padding-left:0}
+  .fakta b{display:block;font-weight:200;font-size:clamp(22px,1.9vw,30px);line-height:1;letter-spacing:-.02em;color:var(--gf,#abffe0);font-variant-numeric:tabular-nums}
+  .fakta span{display:block;margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#dbe5ea;line-height:1.5}
+  @media(max-width:900px){
+    .onas-hero{height:auto;min-height:0;background:transparent}
+    .onas-hero::before{display:none}
+    .onas-hero picture{position:relative;inset:auto;height:68vw;min-height:240px}
+    .onas-hero picture{-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
+    .onas-hero picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,42,.6) 0%,rgba(18,30,42,0) 26%,rgba(18,30,42,0) 100%)}
+    .onas-hero img.bg{object-position:12% 50%}
+    .onas-hero .copy{padding-top:6px;padding-bottom:6px}
+    .o-intro{grid-template-columns:1fr}
+    .fakta ul{grid-template-columns:1fr 1fr}
+    .fakta li:nth-child(3){border-left:0;padding-left:0}
+    .fakta li:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
+  }
 </style>
 </head>
 <body>
@@ -153,12 +190,33 @@
 </header>
 
 <main id="obsah">
-<section class="page-head">
-  <div class="wrap rv">
+<section class="onas-hero">
+  <picture>
+    <source media="(max-width:700px)" srcset="img/o-nas-hero-mobil.jpg">
+    <img class="bg" src="img/o-nas-hero.jpg" width="2400" height="1600" alt="Dodávka Heliobus se švýcarskou značkou na pražském mostě, v pozadí Pražský hrad" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="wrap copy rv">
     <nav class="crumbs k" aria-label="Drobečková navigace"><ol><li><a href="index.html">Úvod</a></li><li aria-current="page">O nás</li></ol></nav>
-    <span class="k kicker">O nás</span>
-    <h1 class="h1"><span style="white-space:nowrap"><i class="flag-ch" aria-hidden="true"></i>Švýcarský</span> vývoj, <span style="white-space:nowrap"><i class="flag-cz" aria-hidden="true"></i>český</span> servis.</h1>
-    <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
+    <h1 class="h1">Švýcarský vývoj,<br>český servis.</h1>
+  </div>
+</section>
+<section class="o-band">
+  <div class="wrap">
+    <div class="o-intro rv">
+      <p class="lead">GLASSFLOOR navrhuje a vyrábí švýcarská Heliobus AG ve St.&nbsp;Gallen. V České republice systém zastupuje WT&nbsp;-&nbsp;WINDOWS TOMORROW s.r.o., která se dennímu světlu v interiéru věnuje od roku 1997.</p>
+      <div class="o-flags">
+        <span><i class="flag-ch" aria-hidden="true"></i>Vývoj a výroba ve Švýcarsku</span>
+        <span><i class="flag-cz" aria-hidden="true"></i>Projekty a servis v Česku</span>
+      </div>
+    </div>
+    <div class="fakta rv">
+      <ul>
+        <li><b>2004</b><span>Vznik GLASSFLOOR ve St.&nbsp;Gallen</span></li>
+        <li><b>20+ let</b><span>Ověřeno v praxi, ne novinka na trhu</span></li>
+        <li><b>100&nbsp;%</b><span>Vývoj a výroba ve Švýcarsku</span></li>
+        <li><b>1997</b><span>WT v oboru denního světla v interiéru</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -293,6 +351,7 @@
     <a href="reference.html">Reference</a>
     <a href="ke-stazeni.html">Ke stažení</a>
     <a href="o-nas.html">O nás</a>
+    <a href="otazky.html">Časté otázky</a>
     <a href="kontakty.html">Kontakty</a>
   </nav>
 </footer>

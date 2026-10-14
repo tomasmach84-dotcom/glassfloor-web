@@ -33,7 +33,7 @@
   "description": "GLASSFLOOR®: pochozí světlíky a prosklené podlahy ve standardních formátech i na míru. Čisté linie, bezprahové osazení, výroba ve St. Gallen, Švýcarsko.",
   "url": "https://www.glassfloor.cz/",
   "inLanguage": "cs",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-14",
   "isPartOf": {
     "@id": "https://www.glassfloor.cz/#web"
   },
@@ -113,85 +113,56 @@
   "description": "Luxusní zakázkově vyráběný pochozí světlík z vrstveného bezpečnostního skla s nerezovým rámem. Architektonické řešení s čistými liniemi a bezprahovým osazením v rovině okolního povrchu. Slouží jako běžně pochozí část terasy, střechy nebo podlahy a přivádí denní světlo do podlaží pod ní. Vyrábí se na míru od 40 cm, ve tvaru čtverce, obdélníku i kruhu, včetně požárně odolné varianty FIRESTOP (REI 30 až REI 120)."
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Co je GLASSFLOOR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GLASSFLOOR je zakázkově vyráběný pochozí světlík švýcarského výrobce Heliobus AG. Nosné prosklení slouží jako běžně pochozí část terasy, střechy nebo podlahy a přivádí denní světlo do podlaží pod ní."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Kdo GLASSFLOOR vyrábí a kdo ho dodává v České republice?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vývoj, konstrukce a kompletace každého kusu probíhají ve výrobě Heliobus AG ve švýcarském St. Gallen. V České republice systém GLASSFLOOR dodává společnost WT - WINDOWS TOMORROW s.r.o., specialista na denní světlo v interiéru."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Jaké rozměry se vyrábějí?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Řady chrome a pure standardně v šesti formátech otvoru od 80 × 80 do 250 × 80 cm, řada circle ve čtyřech průměrech 60 až 120 cm. Na míru se vyrábí od 40 cm bez horní hranice."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Jaké zatížení pochozí zasklení snese?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Užitné zatížení je 5,0 kN/m², třída odolnosti P8B. Vyšší únosnost včetně pojezdu se navrhuje zakázkově."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Hodí se GLASSFLOOR i do interiéru nebo jako požární strop?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ano. Řada pure se používá i v podlahách obytných prostor a varianta FIRESTOP plní funkci požárně dělicí konstrukce s odolností REI 30 až REI 120."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Kolik GLASSFLOOR stojí?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GLASSFLOOR je zakázkové řešení bez ceníku, cena vychází z technického návrhu konkrétního kusu. U menších standardních formátů začíná kolem 100 000 Kč."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Jak dlouho trvá dodání?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Každý kus jde do výroby až po odsouhlaseném návrhu a vyrábí se ve Švýcarsku. Mezi zadáním a osazením počítejte s několika týdny."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Jak spolupráce začíná?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pošlete základní výkres, řez nebo popis záměru. Nejprve posoudíme, zda je GLASSFLOOR pro danou konstrukci a architektonický záměr vhodným řešením, a navrhneme další technický postup."
-      }
-    }
-  ]
-}
-</script>
 <link rel="stylesheet" href="css/glassfloor.css">
 <style>
-  .hero-photo img{object-position:center 45%}
-  .hero .eyebrow .e-rule{margin-top:0}
-  @media(max-width:900px){.hero-photo img{object-position:center center}}
-  .hero-copy{padding-top:clamp(96px,8vw,140px) !important}
-  @media(max-width:900px){.hero-copy{padding-top:clamp(88px,14vw,112px) !important}}
+  .home-hero{padding:0;display:flex;flex-direction:column;min-height:min(100svh,1000px);background:transparent;color:#fff}
+  .hh-main{position:relative;isolation:isolate;flex:1;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;min-height:430px;background:#161e25}
+  .hh-main picture,.hh-main img.bg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:-2}
+  .hh-main img.bg{object-fit:cover;object-position:center 72%;filter:brightness(1.12) saturate(1.06)}
+  @media(prefers-reduced-motion:no-preference){.hh-main img.bg{animation:hhZoom 30s ease-in-out infinite alternate}}
+  @keyframes hhZoom{from{transform:scale(1)}to{transform:scale(1.05)}}
+  .hh-main::before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(ellipse 58% 90% at 16% 64%,rgba(18,30,42,.52) 0%,rgba(18,30,42,.3) 45%,rgba(18,30,42,0) 78%),
+               linear-gradient(90deg,rgba(18,30,42,.34) 0%,rgba(18,30,42,.18) 30%,rgba(18,30,42,.04) 54%,rgba(18,30,42,0) 68%),
+               linear-gradient(180deg,rgba(18,30,42,.2) 0%,rgba(18,30,42,0) 12%)}
+  .hh-swiss a{display:flex;align-items:center;gap:clamp(14px,1.4vw,20px);color:#fff;text-decoration:none;height:100%}
+  .hh-cross{position:relative;flex:0 0 auto;width:clamp(36px,2.8vw,44px);height:clamp(36px,2.8vw,44px);background:#da291c;box-shadow:0 6px 22px rgba(0,0,0,.3)}
+  .hh-cross::before,.hh-cross::after{content:"";position:absolute;background:#fff}
+  .hh-cross::before{left:50%;top:19%;width:23%;height:62%;transform:translateX(-50%)}
+  .hh-cross::after{top:50%;left:19%;height:23%;width:62%;transform:translateY(-50%)}
+  .hh-fakta .hh-btxt b{display:block;font-weight:300;font-size:clamp(15px,1.2vw,18px);letter-spacing:.22em;text-transform:uppercase;line-height:1.1;margin-bottom:6px;color:#fff}
+  .hh-fakta .hh-btxt span{display:block;margin:0;font-size:11px;letter-spacing:.1em;line-height:1.5;color:#e6edf1;text-transform:none}
+  .hh-copy{width:100%;box-sizing:border-box;padding-top:150px;padding-bottom:clamp(36px,5vw,72px)}
+  .home-hero .eyebrow{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.92);margin-bottom:clamp(20px,3vh,32px)}
+  .home-hero .eyebrow .e-rule{display:block;width:34px;height:1px;background:currentColor;opacity:.6}
+  .home-hero h1{font-family:"Segoe UI Variable Display","Segoe UI Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Arial,sans-serif;font-weight:170;font-size:clamp(58px,6vw,104px);line-height:1.02;letter-spacing:-.02em;max-width:none;text-shadow:0 2px 34px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.3)}
+  .home-hero .cta-row{display:flex;align-items:center;gap:clamp(22px,3vw,40px);flex-wrap:wrap;margin-top:clamp(28px,4vh,44px)}
+  .home-hero .lnk{color:#fff}
+  .hh-fakta{border-top:1px solid rgba(255,255,255,.2);background:transparent}
+  .hh-fakta ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+  .hh-fakta li{padding:clamp(14px,1.3vw,20px) clamp(14px,2vw,28px);border-left:1px solid rgba(255,255,255,.16)}
+  .hh-fakta li:first-child{border-left:0;padding-left:0}
+  .hh-fakta b{display:block;font-weight:200;font-size:clamp(22px,1.9vw,30px);line-height:1;letter-spacing:-.02em;color:var(--gf,#abffe0);font-variant-numeric:tabular-nums}
+  .hh-fakta span{display:block;margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e3ebef;line-height:1.5}
+  .rada-foto{display:block}
+  .rada-foto figure img{transition:transform .9s ease}
+  .rada-foto:hover figure img{transform:scale(1.04)}
+  .rada p{margin-bottom:clamp(16px,2vw,24px)}
+  @media(max-width:900px){
+    .home-hero{min-height:0}
+    .hh-main{display:block;min-height:0;background:transparent}
+    .hh-main::before{display:none}
+    .hh-main picture{position:relative;inset:auto;height:78vw;min-height:280px;width:100%}
+    .hh-main picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,42,.55) 0%,rgba(18,30,42,0) 24%,rgba(18,30,42,0) 62%,rgba(18,30,42,0) 100%)}
+    .hh-main picture{-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
+    .hh-main img.bg{object-position:50% 70%}
+    .hh-copy{padding-top:6px}
+    .hh-fakta ul{grid-template-columns:1fr 1fr}
+    .hh-swiss{grid-column:1/-1}
+    .hh-fakta li:nth-child(3){border-left:0;padding-left:0}
+    .hh-fakta li:nth-child(n+2){border-top:1px solid rgba(255,255,255,.16)}
+    .hh-fakta li:nth-child(2){border-left:0;padding-left:0}
+  }
 </style>
 </head>
 <body>
@@ -229,33 +200,36 @@
 </header>
 
 <main id="obsah">
-<section class="hero" style="padding:0">
-  <div class="hero-copy">
-    <div>
-      <p class="eyebrow"><i class="e-rule" aria-hidden="true"></i>Zakázkové pochozí světlíky a prosklené podlahy</p>
-      <h1>Světlo prochází<br>místy, která ostatní<br>považují za podlahu.</h1>
-      <div class="cta-row">
-        <a class="lnk" href="reference.html">Vybrané projekty</a>
-      </div>
+<section class="home-hero">
+  <div class="hh-main">
+  <picture>
+    <source media="(max-width:900px)" srcset="img/opt/hero-zumikon-mobil.webp">
+    <img class="bg" src="img/opt/hero-zumikon-169.webp" alt="Dva pochozí světlíky GLASSFLOOR zapuštěné v rovině terasy u vily v Zumikonu, Švýcarsko" width="1920" height="1098" decoding="async" fetchpriority="high">
+  </picture>
+  <div class="wrap hh-copy">
+    <h1>Světlo prochází<br>místy, která ostatní<br>považují za podlahu.</h1>
+    <div class="cta-row">
+      <button class="cta" type="button" onclick="document.getElementById('dlg').showModal()">Představit projekt</button>
     </div>
-    <p class="claim"><i class="swiss-cross" aria-hidden="true" style="width:19px;height:19px"></i>Dokonalost bez kompromisu</p>
   </div>
-  <figure class="hero-photo">
-    <picture>
-      <source media="(max-width:900px)" srcset="img/opt/hero-zumikon-mobil.webp">
-      <img src="img/opt/hero-zumikon-169.webp" alt="Dva pochozí světlíky GLASSFLOOR zapuštěné v rovině terasy u vily v Zumikonu, Švýcarsko" width="1920" height="1098" decoding="async" fetchpriority="high">
-    </picture>
-    <div class="note">
-      <span>Realizace: vila, Zumikon (CH)</span>
+  </div>
+  <div class="hh-fakta">
+    <div class="wrap">
+      <ul>
+        <li class="hh-swiss"><a href="o-nas.html" aria-label="Swiss made: vyvinuto a vyrobeno ve St. Gallen, Švýcarsko"><span class="hh-cross" aria-hidden="true"></span><span class="hh-btxt"><b>Swiss made</b><span>Vyvinuto a vyrobeno ve St.&nbsp;Gallen</span></span></a></li>
+        <li><b>2004</b><span>Vznik GLASSFLOOR ve St.&nbsp;Gallen</span></li>
+        <li><b>20+ let</b><span>Ověřeno v praxi, ne novinka na trhu</span></li>
+        <li><b>REI&nbsp;120</b><span>Požární odolnost varianty FIRESTOP</span></li>
+      </ul>
     </div>
-  </figure>
+  </div>
 </section>
 
-<section class="manifesto">
+<section class="manifesto" style="padding:clamp(56px,7vw,104px) 0">
   <div class="wrap g" style="align-items:center">
     <div class="c7 rv">
       <p class="m1">GLASSFLOOR <b>není řešení pro každý projekt.</b></p>
-      <p class="m2">Není levnější variantou běžného světlíku a nesnaží se jí být. Pokud o výběru rozhoduje nejnižší pořizovací cena, existují vhodnější řešení a řekneme to rovnou. GLASSFLOOR dává smysl na stavbách, kde váží architektura, detail, technická kvalita a výsledné provedení. Proto každý projekt nejprve technicky posuzujeme.</p>
+      <p class="m2">Není levnější variantou běžného světlíku a nesnaží se jí být. Dává smysl na stavbách, kde váží architektura, detail a technická kvalita. Proto každý projekt nejprve technicky posuzujeme.</p>
     </div>
     <figure class="c5 f3 rv">
       <img src="img/interier-pure-jidelna.jpg" alt="Interiér s prosklenou pochozí podlahou GLASSFLOOR pure, denní světlo prochází ze střešního světlíku o podlaží níž" width="851" height="1280" decoding="async" loading="lazy">
@@ -264,46 +238,7 @@
   </div>
 </section>
 
-<section class="xl vkostce" id="v-kostce">
-  <div class="wrap g">
-    <div class="c5 rv">
-      <span class="k kicker">GLASSFLOOR v kostce</span>
-      <h2 class="h2">Co je pochozí světlík GLASSFLOOR.</h2>
-      <p class="lead">GLASSFLOOR je pochozí světlík a prosklená podlaha švýcarského výrobce Heliobus AG ze St. Gallen. Nosné zasklení v nerezovém rámu slouží jako běžně pochozí plocha terasy, střechy nebo podlahy a přivádí denní světlo do podlaží pod ní. V České republice ho dodává WT - WINDOWS TOMORROW s.r.o.</p>
-    </div>
-    <dl class="meta c7 rv">
-      <div class="r"><span class="meta-l">Řady</span><b>chrome (rám 4 cm), pure (rám 0,5 cm), circle (kruh, rám 0,3 cm)</b></div>
-      <div class="r"><span class="meta-l">Varianty</span><b>FIRESTOP REI 30 až 120, AIRFLOW (větrání), RWA (odvod kouře)</b></div>
-      <div class="r"><span class="meta-l">Rozměry</span><b>standardní formáty, na míru od 40 cm bez horní hranice</b></div>
-      <div class="r"><span class="meta-l">Zasklení</span><b>vrstvené bezpečnostní sklo, U<sub>g</sub> 1,1 až 0,5 W/m²K, propustnost světla 73 až 88 %</b></div>
-      <div class="r"><span class="meta-l">Zatížení</span><b>5,0 kN/m², třída odolnosti P8B</b></div>
-      <div class="r"><span class="meta-l">Původ</span><b>Swiss made, Heliobus AG, St. Gallen</b></div>
-      <div class="r"><span class="meta-l">Cena a dodání</span><b>bez ceníku, menší standardní formáty od cca 100 000 Kč, dodání v řádu týdnů</b></div>
-    </dl>
-  </div>
-</section>
-
-<section class="principle panel xl tint" id="system">
-  <div class="wrap g">
-    <div class="c7 rv">
-      <span class="k kicker">Zakázkový systém pochozího prosklení</span>
-      <h2 class="h2">Navržen pro konkrétní stavbu.</h2>
-      <p class="lead">Výrobek se přizpůsobuje stavbě, ne stavba výrobku. Standardní formáty pokrývají běžné případy. Kde se stavba do řady nevejde, vzniká rozměr, skladba zasklení i způsob osazení pro jeden konkrétní projekt a do jeho finální roviny se také vyrobí.</p>
-      <div class="principles">
-        <div class="row"><span class="meta-l">01</span><b>Rozměr podle projektu</b><p>Čtverec, obdélník i kruh. Buď některý ze standardních formátů, nebo světlý rozměr, který určí návrh stavby.</p></div>
-        <div class="row"><span class="meta-l">02</span><b>Skladba a rám podle konstrukce</b><p>Nosné zasklení i rám se navrhují podle skladby stropu nebo terasy a podle zatížení, které je čeká.</p></div>
-        <div class="row"><span class="meta-l">03</span><b>Osazení bez prahu</b><p>Sklo dosedá do jedné roviny s okolním povrchem. Po dokončení stavby zůstane vidět detail, ne technika.</p></div>
-        <div class="row"><span class="meta-l">04</span><b>Kompletace a kontrola ve St. Gallen</b><p>Každý kus se kompletuje a kontroluje ve výrobě Heliobus AG, než opustí Švýcarsko.</p></div>
-      </div>
-    </div>
-    <figure class="c5 rv">
-      <img src="img/opt/detail-interier-strop.webp" alt="Pohled z interiéru vzhůru skrz pochozí světlík" style="object-position:60% center" width="1920" height="1393" decoding="async" loading="lazy">
-      <figcaption class="cap">Pohled z interiéru, nad sklem terasa</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="xl" id="rady">
+<section class="xl" id="rady" style="padding-top:clamp(40px,5vw,72px)">
   <div class="wrap">
     <div class="sec-head g rv">
       <div class="c7">
@@ -315,42 +250,27 @@
     <div class="rady-grid g rv">
 
       <div class="c4 rada">
-        <figure><img src="img/terasa-drevo-ctverec.jpg" alt="Čtvercový pochozí světlík s nerezovým rámem v dřevěné terase" loading="lazy" width="980" height="653" decoding="async"></figure>
+        <a class="rada-foto" href="chrome.html" tabindex="-1" aria-hidden="true"><figure><img src="img/hero-chrome-mobil.jpg" alt="Pochozí světlík GLASSFLOOR chrome s leštěným nerezovým rámem v dřevěné terase" loading="lazy" width="1000" height="750" decoding="async"></figure></a>
         <span class="meta-l rada-n">Řada 01</span>
         <h3>GLASSFLOOR <em>chrome</em></h3>
         <p>Nerezový rám široký 4 cm zůstává přiznaný. Působí masivně a drží tvar i u větších rozměrů.</p>
-        <ul class="rada-fakta">
-          <li><span>Tvar</span>čtverec a obdélník</li>
-          <li><span>Otvor</span>80 × 80 až 250 × 80 cm</li>
-          <li><span>Rám</span>nerez, výška 12 cm</li>
-        </ul>
-        <a class="lnk" href="chrome.html" aria-label="Rozměry a provedení řady chrome">Rozměry a provedení</a>
+        <a class="lnk" href="chrome.html" aria-label="Prohlédnout řadu chrome">Prohlédnout řadu</a>
       </div>
 
       <div class="c4 rada">
-        <figure><img src="img/terasa-pure-vyhled.jpg" alt="Obdélníkový světlík GLASSFLOOR pure v dlažbě terasy s výhledem do krajiny" loading="lazy" width="1024" height="682" decoding="async"></figure>
+        <a class="rada-foto" href="pure.html" tabindex="-1" aria-hidden="true"><figure><img src="img/hero-pure-mobil.jpg" alt="Pochozí světlík GLASSFLOOR pure v kamenné dlažbě zahrady" loading="lazy" width="1000" height="749" decoding="async"></figure></a>
         <span class="meta-l rada-n">Řada 02</span>
         <h3>GLASSFLOOR <em>pure</em></h3>
         <p>Velmi úzký obvodový rám. Ze skla se stává téměř jen plocha v podlaze.</p>
-        <ul class="rada-fakta">
-          <li><span>Tvar</span>čtverec a obdélník</li>
-          <li><span>Otvor</span>80 × 80 až 250 × 80 cm</li>
-          <li><span>Rám</span>nerez, minimální šířka</li>
-        </ul>
-        <a class="lnk" href="pure.html" aria-label="Rozměry a provedení řady pure">Rozměry a provedení</a>
+        <a class="lnk" href="pure.html" aria-label="Prohlédnout řadu pure">Prohlédnout řadu</a>
       </div>
 
       <div class="c4 rada">
-        <figure><img src="img/opt/terasa-kruhovy-svetlik.webp" alt="Kruhový pochozí světlík v travertinové terase" loading="lazy" width="1920" height="1280" decoding="async"></figure>
+        <a class="rada-foto" href="circle.html" tabindex="-1" aria-hidden="true"><figure><img src="img/hero-circle-mobil.jpg" alt="Kruhový pochozí světlík v travertinové terase" loading="lazy" width="1000" height="667" decoding="async"></figure></a>
         <span class="meta-l rada-n">Řada 03</span>
         <h3>GLASSFLOOR <em>circle</em></h3>
         <p>Kruh jako protiváha pravoúhlé stavbě, nebo naopak doplnění organické architektury.</p>
-        <ul class="rada-fakta">
-          <li><span>Tvar</span>kruh</li>
-          <li><span>Otvor</span>&#8960; 60 až 120 cm</li>
-          <li><span>Rám</span>nerez, výška 12 cm</li>
-        </ul>
-        <a class="lnk" href="circle.html" aria-label="Rozměry a provedení řady circle">Rozměry a provedení</a>
+        <a class="lnk" href="circle.html" aria-label="Prohlédnout řadu circle">Prohlédnout řadu</a>
       </div>
 
     </div>
@@ -358,11 +278,10 @@
   </div>
 </section>
 
-<section class="xl" id="projekty">
+<section class="xl" id="projekty" style="padding-top:clamp(20px,3vw,40px)">
   <div class="wrap">
-    <span class="ghost rv" aria-hidden="true">01</span>
     <div class="proj-head rv">
-      <span class="meta-l">Projekt 01</span>
+      <span class="meta-l">Vybraná realizace</span>
       <h3 class="h3">Zumikon · obytné podlaží pod zahradou</h3>
       <span class="k">Rodinný dům · Švýcarsko</span>
     </div>
@@ -371,77 +290,15 @@
         <img src="img/opt/zahrada-vodni-linie.webp" alt="Linie pochozích světlíků GLASSFLOOR v kamenném chodníku zahrady" width="1536" height="1024" decoding="async" loading="lazy">
         <figcaption class="cap">Linie světlíků v rovině kamenného chodníku · Foto: Pius Amrein</figcaption>
       </figure>
-      <div class="c4 rv">
+      <div class="c5 rv">
         <p style="font-weight:260;font-size:19px;color:#e3eaee">Zahrada zůstala pochozí v celé ploše. Řada světlíků sleduje chodník podél fasády a o podlaží níž nahrazuje umělé osvětlení denním světlem.</p>
+        <p style="margin-top:22px"><a class="lnk" href="reference.html">Další realizace</a></p>
       </div>
-      <dl class="meta c4 rv">
+      <dl class="meta c7 rv">
         <div class="r"><span class="meta-l">Požadavek</span><b>Denní světlo pro podlaží pod zahradou, bez šachet a dvorků</b></div>
         <div class="r"><span class="meta-l">Řešení</span><b>Liniové pochozí světlíky na míru, osazené v kameni a štěrku</b></div>
         <div class="r"><span class="meta-l">Technická zvláštnost</span><b>Finální rovina skla sjednocená s okolní dlažbou</b></div>
       </dl>
-      <figure class="c4 f2 rv">
-        <img src="img/opt/zahrada-svetliky-chodnik.webp" alt="Osazení světlíků v rovině kamene mezi buxusy" width="1536" height="1024" decoding="async" loading="lazy">
-        <figcaption class="cap">Detail téhož projektu, osazení v rovině kamene</figcaption>
-      </figure>
-    </div>
-    <p class="tm-note rv">Další stavby a celou galerii najdete na stránce <a class="lnk" href="reference.html">Reference</a>.</p>
-  </div>
-</section>
-
-<section class="break" aria-label="Terasa klasické vily s pochozím prosklením">
-  <div class="wrap rv">
-    <p class="b1">Standardní rozměr,<br>nebo přesně ten váš.</p>
-    <p class="b2">Standardní formáty i výroba na míru od 40 cm</p>
-  </div>
-</section>
-
-<section class="xl hub-sec">
-  <div class="wrap">
-    <div class="sec-head g rv">
-      <div class="c7">
-        <span class="k kicker">Kam dál</span>
-        <h2 class="h2">Podle toho, co potřebujete.</h2>
-      </div>
-      <p class="lead c5">Web je rozdělený podle otázek, které si u pochozího prosklení kladou architekti, projektanti i investoři.</p>
-    </div>
-    <div class="hub-grid g rv">
-      <a class="hub" href="pro-architekty.html">
-        <span class="meta-l">01</span>
-        <h3>Pro architekty a projektanty</h3>
-        <p>Technická data, výrobní detaily, podklady k projektu a otevřeně o tom, kdy GLASSFLOOR doporučit nebudeme.</p>
-        <span class="lnk">Otevřít</span>
-      </a>
-      <a class="hub" href="reference.html">
-        <span class="meta-l">02</span>
-        <h3>Reference</h3>
-        <p>Vila v Zumikonu, bazén u Tegernsee, administrativní budova a další realizace ze Švýcarska.</p>
-        <span class="lnk">Zobrazit realizace</span>
-      </a>
-      <a class="hub" href="o-nas.html">
-        <span class="meta-l">03</span>
-        <h3>Výroba a lidé</h3>
-        <p>Kdo GLASSFLOOR vyvíjí ve St. Gallen, kdo ho dodává v České republice a jak vzniká každý kus.</p>
-        <span class="lnk">O nás</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="prod faq">
-  <div class="wrap g">
-    <div class="c4 rv">
-      <span class="meta-l">Časté otázky</span>
-      <h2 class="h2" style="margin-top:10px">Nejčastější otázky o pochozích světlících.</h2>
-    </div>
-    <div class="c8 faq-list rv">
-      <div class="q"><h3>Co je GLASSFLOOR?</h3><p>GLASSFLOOR je zakázkově vyráběný pochozí světlík švýcarského výrobce Heliobus AG. Nosné prosklení slouží jako běžně pochozí část terasy, střechy nebo podlahy a přivádí denní světlo do podlaží pod ní.</p></div>
-      <div class="q"><h3>Kdo GLASSFLOOR vyrábí a kdo ho dodává v České republice?</h3><p>Vývoj, konstrukce a kompletace každého kusu probíhají ve výrobě Heliobus AG ve švýcarském St. Gallen. V České republice systém GLASSFLOOR dodává společnost WT - WINDOWS TOMORROW s.r.o., specialista na denní světlo v interiéru.</p></div>
-      <div class="q"><h3>Jaké rozměry se vyrábějí?</h3><p>Řady chrome a pure standardně v šesti formátech otvoru od 80 × 80 do 250 × 80 cm, řada circle ve čtyřech průměrech 60 až 120 cm. Na míru se vyrábí od 40 cm bez horní hranice.</p></div>
-      <div class="q"><h3>Jaké zatížení pochozí zasklení snese?</h3><p>Užitné zatížení je 5,0 kN/m², třída odolnosti P8B. Vyšší únosnost včetně pojezdu se navrhuje zakázkově.</p></div>
-      <div class="q"><h3>Hodí se GLASSFLOOR i do interiéru nebo jako požární strop?</h3><p>Ano. Řada pure se používá i v podlahách obytných prostor a varianta FIRESTOP plní funkci požárně dělicí konstrukce s odolností REI 30 až REI 120.</p></div>
-      <div class="q"><h3>Kolik GLASSFLOOR stojí?</h3><p>GLASSFLOOR je zakázkové řešení bez ceníku, cena vychází z technického návrhu konkrétního kusu. U menších standardních formátů začíná kolem 100 000 Kč.</p></div>
-      <div class="q"><h3>Jak dlouho trvá dodání?</h3><p>Každý kus jde do výroby až po odsouhlaseném návrhu a vyrábí se ve Švýcarsku. Mezi zadáním a osazením počítejte s několika týdny.</p></div>
-      <div class="q"><h3>Jak spolupráce začíná?</h3><p>Pošlete základní výkres, řez nebo popis záměru. Nejprve posoudíme, zda je GLASSFLOOR pro danou konstrukci a architektonický záměr vhodným řešením, a navrhneme další technický postup.</p></div>
     </div>
   </div>
 </section>
@@ -500,6 +357,7 @@
     <a href="reference.html">Reference</a>
     <a href="ke-stazeni.html">Ke stažení</a>
     <a href="o-nas.html">O nás</a>
+    <a href="otazky.html">Časté otázky</a>
     <a href="kontakty.html">Kontakty</a>
   </nav>
 </footer>

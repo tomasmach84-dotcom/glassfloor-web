@@ -112,7 +112,19 @@
   .placeholder-figure::after{display:none}
   .team-grid .c3.tm{grid-column:span 3}
   @media(max-width:900px){.team-grid .c3.tm{grid-column:span 12}}
-
+  /* 14.10.2026: jmenovité kontakty, kulaté portréty na mátovém podkladu GLASSFLOOR */
+  .osoby{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,36px);
+    border-top:2px solid var(--ink);margin-top:clamp(34px,4.4vw,56px);padding-top:clamp(28px,3.2vw,44px)}
+  .osoba{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .osoba img{width:min(220px,80%);height:auto;aspect-ratio:1;margin-bottom:clamp(14px,1.8vw,22px);
+    filter:drop-shadow(0 10px 22px rgba(0,0,0,.28))}
+  .osoba h3{font-weight:260;font-size:clamp(21px,1.8vw,27px);letter-spacing:-.012em;line-height:1.18;margin-bottom:8px}
+  .osoba .role{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);min-height:2.6em;margin-bottom:12px}
+  .osoba a{font-weight:260;font-size:clamp(18px,1.5vw,21px);font-variant-numeric:tabular-nums;color:var(--gf,#abffe0);
+    text-decoration:none;border-bottom:1px solid rgba(171,255,224,.4);padding-bottom:2px}
+  .osoba a:hover{border-bottom-color:var(--gf,#abffe0)}
+  @media(max-width:1000px){.osoby{grid-template-columns:1fr 1fr;row-gap:clamp(30px,5vw,46px)}}
+  @media(max-width:520px){.osoby{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -150,7 +162,11 @@
 </header>
 
 <main id="obsah">
-<section class="page-head">
+<section class="page-head ph">
+  <picture>
+    <source media="(max-width:700px)" srcset="img/hero-kontakty-mobil.jpg">
+    <img class="bg" src="img/hero-kontakty.jpg" alt="Pohled shora skrz pochozí sklo GLASSFLOOR do interiéru" width="2400" height="1600" style="object-position:50% 50%" fetchpriority="high" decoding="async">
+  </picture>
   <div class="wrap rv">
     <nav class="crumbs k" aria-label="Drobečková navigace"><ol><li><a href="index.html">Úvod</a></li><li aria-current="page">Kontakty</li></ol></nav>
     <span class="k kicker">Kontakt</span>
@@ -172,16 +188,24 @@
     </div>
     <div class="c6 rv">
       <span class="meta-l">Nejrychlejší cesta k odpovědi</span>
-      <h3 style="margin:10px 0 clamp(14px,1.8vw,20px)">Popište nám projekt.</h3>
+      <h3 style="margin:10px 0 clamp(14px,1.8vw,20px);font-weight:260;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.012em">Popište nám projekt.</h3>
       <p>Stačí základní výkres, řez nebo jen popis záměru. Klidně i fotka nebo náčrt tužkou. Nejprve posoudíme, zda je GLASSFLOOR pro danou konstrukci vhodným řešením.</p>
       <button class="cta" style="margin-top:clamp(22px,3vw,32px)" onclick="document.getElementById('dlg').showModal()">Představit projekt</button>
     </div>
   </div>
 </section>
 
-<!-- ŠABLONA: S KÝM BUDETE JEDNAT — 4 kontaktní osoby, zatím bez fotek/jmen (4.9.2026).
-     Až budou k dispozici skutečné fotky a jména, nahradit placeholder-figure za <img> a text v [závorkách]. -->
-<!-- Sekce "S kým budete jednat" skryta do doplnění jmen, fotek a kontaktů (originál v _STARE/pred-restrukturalizaci-2026-10-02/kontakty.html) -->
+<section class="prod">
+  <div class="wrap">
+    <span class="meta-l rv">S kým budete jednat</span>
+    <div class="osoby">
+      <article class="osoba rv"><img src="img/tym/radomir-kucera.png" alt="Radomír Kučera" width="400" height="400" loading="lazy"><h3>Radomír Kučera</h3><span class="role">Obchodní ředitel, majitel</span><a href="tel:+420608918484">608 918 484</a></article>
+      <article class="osoba rv"><img src="img/tym/ondrej-malik.png" alt="Ing. Ondřej Malík" width="400" height="400" loading="lazy"><h3>Ing. Ondřej Malík</h3><span class="role">Technický ředitel</span><a href="tel:+420774168885">774 168 885</a></article>
+      <article class="osoba rv"><img src="img/tym/tomas-mach.png" alt="Tomáš Mach" width="400" height="400" loading="lazy"><h3>Tomáš Mach</h3><span class="role">Obchodní zástupce</span><a href="tel:+420774733323">774 733 323</a></article>
+      <article class="osoba rv"><img src="img/tym/milena-volakova.png" alt="Ing. Milena Voláková" width="400" height="400" loading="lazy"><h3>Ing. Milena Voláková</h3><span class="role">Marketingový ředitel, jednatel</span><a href="mailto:info@glassfloor.cz">info@glassfloor.cz</a></article>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -209,6 +233,7 @@
     <a href="reference.html">Reference</a>
     <a href="ke-stazeni.html">Ke stažení</a>
     <a href="o-nas.html">O nás</a>
+    <a href="otazky.html">Časté otázky</a>
     <a href="kontakty.html">Kontakty</a>
   </nav>
 </footer>
