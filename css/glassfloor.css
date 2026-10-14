@@ -811,3 +811,19 @@ footer .foot-nav a:hover{opacity:1}
   main p:not([class]){font-weight:260;font-size:17px;line-height:1.6}
   /* velké nadpisy položek: stejný řez */
   .tm h3,.aud h3,.rada h3,.spolecne h3,.ne h3,.dava h3,.hub h3{font-weight:260;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.012em}
+
+  /* ---------- Celá karta řady je klikací (14.10.2026) ---------- */
+  .rada{position:relative;cursor:pointer;transition:transform .45s ease}
+  .rada .lnk{position:static}
+  .rada .lnk::after{content:"";position:absolute;inset:0;z-index:2}
+  .rada figure{transition:border-color .3s}
+  .rada figure img{transition:transform .9s ease}
+  .rada h3,.rada .lnk{transition:color .25s,border-color .25s}
+  @media(hover:hover){
+    .rada:hover{transform:translateY(-6px)}
+    .rada:hover figure img{transform:scale(1.04)}
+    .rada:hover figure{border-color:var(--gf)}
+    .rada:hover h3{color:var(--gf)}
+    .rada:hover .lnk{border-color:var(--gf);color:var(--gf)}
+  }
+  .rada:focus-within{outline:1px solid var(--gf);outline-offset:6px}
