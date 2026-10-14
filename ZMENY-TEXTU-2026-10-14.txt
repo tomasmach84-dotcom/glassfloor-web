@@ -1,0 +1,59 @@
+﻿ZMĚNY TEXTU NA WEBU GLASSFLOOR (14. 10. 2026)
+Zdroj: úpravy, které jste provedl tlačítkem „Upravit text“ přímo na stránkách.
+
+Zapsáno do kódu: 11 z 14 změn (3 záměrně nezapsány, viz níže).
+
+[produkty.html] ZAPSÁNO
+  Původně: Každý GLASSFLOOR je nosné izolační zasklení v nerezovém rámu, osazené v jedné rovině s okolním povrchem. Řady se liší tvarem a tím, kolik rámu po dokončení zůstane vidět. Konstrukce, nosnost i způsob osazení jsou u všech tří stejné.
+  Nově:    Každý GLASSFLOOR je nosné izolační zasklení v nerezovém rámu, osazené v jedné rovině s okolním povrchem. Řady se liší tvarem a silou rámu, která po dokončení zůstane vidět. Konstrukce, nosnost i způsob osazení jsou u všech tří stejné.
+
+[produkty.html] ZAPSÁNO
+  Původně: Na míru: od 40 cm bez horní hranice, ve všech třech tvarech. Každá řada existuje i v požárním provedení FIRESTOP a ve variantách AIRFLOW a RWA.
+  Nově:    Na míru: od 40 cm bez horní hranice, ve všech třech tvarech. Každá řada existuje i v požárním provedení FIRESTOP a některé ve variantách AIRFLOW a RWA.
+
+[firestop.html] ZAPSÁNO
+  Původně: Pochozí světlík, který zároveň plní funkci požárně dělicí konstrukce. Podle výrobce jde o první schválené a certifikované řešení pochozího protipožárního zasklení v Evropě. Používá se ve školách, nemocnicích a komerčních budovách, tedy tam, kde strop mezi podlažími musí požáru odolat.
+  Nově:    Pochozí světlík, který zároveň plní funkci požárně dělicí konstrukce. Podle výrobce jde o první schválené a certifikované řešení pochozího, izolovaného a protipožárního zasklení v Evropě. Používá se ve školách, nemocnicích a komerčních budovách, tedy tam, kde strop mezi podlažími musí požáru odolat.
+
+[reference.html] ZAPSÁNO
+  Původně: Zahrada zůstala pochozí v celé ploše. Řada světlíků sleduje chodník podél fasády a o podlaží níž nahrazuje umělé osvětlení denním světlem.
+  Nově:    Zahrada zůstala pochozí v celé ploše. Řada světlíků kopíruje chodník podél fasády a o podlaží níž nahrazuje umělé osvětlení denním světlem.
+
+[reference.html] NEZAPSÁNO – rozepsaný text „Administrativa – ------“ (nedokončeno)
+  Původně: Administrativa · pochozí střecha kanceláří
+  V editoru: Administrativa · ------
+
+[ke-stazeni.html] ZAPSÁNO
+  Původně: Napojení na teplou střechu, kde izolace leží nad nosnou konstrukcí.
+  Nově:    Napojení na zateplenou střechu, kde izolace leží nad nosnou konstrukcí.
+
+[ke-stazeni.html] NEZAPSÁNO – stejný text jako u chrome vložen i k pure (pravděpodobně omyl při úpravě)
+  Původně: Úzký rám řady pure ve skladbě teplé střechy s izolací nad konstrukcí.
+  V editoru: Napojení na zateplenou střechu, kde izolace leží nad nosnou konstrukcí.
+
+[ke-stazeni.html] NEZAPSÁNO – stejný text jako u chrome vložen i k circle (pravděpodobně omyl při úpravě)
+  Původně: Kruhový formát v teplé střeše, s izolací uloženou nad nosnou konstrukcí.
+  V editoru: Napojení na zateplenou střechu, kde izolace leží nad nosnou konstrukcí.
+
+[ke-stazeni.html] ZAPSÁNO
+  Původně: Dvoustránkový list ke každé řadě: skladba, tabulka standardních rozměrů, technická data zasklení a přehled zkušebních protokolů. Listy jsou v originále výrobce, tedy v němčině. Českou verzi na vyžádání připravíme.
+  Nově:    Technický list ke každé řadě: skladba, tabulka standardních rozměrů, technická data zasklení a přehled zkušebních protokolů. A katalog GLASSFLOOR.
+
+[o-nas.html] ZAPSÁNO
+  Původně: Heliobus AG, St. Gallen: vývoj, konstrukce, kompletace a kontrola každého kusu. Sem se posílá technický návrh a odsud přijíždí hotový, slícovaný prvek.
+  Nově:    Heliobus AG, St. Gallen: vývoj, konstrukce, kompletace a kontrola každého kusu. Sem se posílá technický návrh a odsud přijíždí hotový produkt.
+
+[o-nas.html] ZAPSÁNO
+  Původně: WT - WINDOWS TOMORROW s.r.o.: zastoupení pro Českou republiku. Technické posouzení projektu, návrh provedení, komunikace s výrobou a podpora na stavbě.
+  Nově:    WT - WINDOWS TOMORROW s.r.o.: zastoupení pro Českou republiku. Technické posouzení projektu, návrh provedení, komunikace s výrobou a realizace na stavbě.
+
+[o-nas.html] ZAPSÁNO
+  Původně: Majitel Glassfloor.cz
+  Nově:    Majitel WT-WINDOWS TOMORROW s.r.o.
+[pro-architekty.html] ZAPSÁNO (doplněno dodatečně)
+  Původně: Osm výrobních detailů napojení v PDF (chrome, pure, circle a dělení skla), tři produktové listy a zkušební doklady. Výkresy DWG a DXF se dodávají přímo k projektu.
+  Nově:    Výrobní detaily napojení v PDF (chrome, pure, circle a dělení skla), tři produktové listy a zkušební doklady. Výkresy DWG a DXF se dodávají přímo k projektu.
+
+[ke-stazeni.html] ZAPSÁNO (doplněno dodatečně)
+  Původně: Technické listy řad
+  Nově:    Technické listy řad a katalogy
